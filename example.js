@@ -25,5 +25,6 @@ const puppeteer = require('puppeteer');
     // log out the headers that are currently visible after scrolling
     let newHeaderCells = await page.$$eval('.ag-header-cell-text', headerCells => headerCells.map(headerCell => headerCell.textContent));
     console.log('afterScroll', newHeaderCells);
+
     await browser.close();
 })();
